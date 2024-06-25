@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسک دوره جاوااسکریپت</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link href="../node_modules/toastr/build/toastr.css" rel="stylesheet"/>
+    <script src="../node_modules/toastr/build/toastr.min.js"></script>
+
+  </head>
+
+  <body>
+    <section class="transaction">
+        <div class="transaction__initial-load">
+          <h1 class="transaction__title">لیست تراکنش ها</h1>
+          <div class="transaction__load-container">
+            <button class="transaction__load-btn">بارگذاری تراکنش ها</button>
+          </div>
+        </div>
+
+        <div class="transaction__list">
+          <div class="list__header">
+            <h1>لیست تراکنش ها</h1>
+            <div class="list__search-box">
+              <input type="text" placeholder="جستجو تراکنش ..." class="list__search__input">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="list__table-container">
+            <h3 class="table-container__title">لیست تراکنش های شما</h3>
+            <table id="transactionTable" cellspacing="0">
+              <thead>
+                  <tr>
+                      <th>ردیف</th>
+                      <th>نوع تراکنش</th>
+                      <th>
+                        <div class="flex-center price-th">
+                          مبلغ
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                        </div>
+                      </th>
+                      <th>شماره پیگیری</th>
+                      <th>
+                        <div class="flex-center date-th">
+                         تاریخ تراکنش
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                        </div>
+                      </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Transactions will be inserted here -->
+              </tbody>
+          </table>
+          </div>
+        </div>
+    </section>
+
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

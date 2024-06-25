@@ -9,7 +9,6 @@ async function searchAndSort(refId = "" , sortBy = "price", sortValue = "asc"){
             return data;
         } 
     }catch(err){
-        console.log(err.message);
         configToaster("error",err.message, "Error");
         
         if(err.response.status === 404) configToaster("error","درخواست با کد وضعیت ۴۰۴ ناموفق بود!", "ناموفق");

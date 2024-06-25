@@ -154,6 +154,8 @@ h1{
   flex: 1;
   height: 100%;
   padding: 1rem;
+  direction: ltr;
+  text-align: right;
 }
 
 .list__search-box input::placeholder,

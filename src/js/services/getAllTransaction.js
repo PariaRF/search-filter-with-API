@@ -9,7 +9,6 @@ async function getAllTransaction(){
             return data;
         } 
     }catch(err){
-        console.log(err.response.status);
         if(err.response.status === 404){
             configToaster("error","درخواست با کد وضعیت ۴۰۴ ناموفق بود!", "ناموفق");
         }else{
